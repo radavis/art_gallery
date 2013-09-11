@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe Artwork do
   it { should belong_to :artist }
+  it { should belong_to :customer}
 
   it { should have_valid(:year).when(2000) }
   it { should_not have_valid(:year).when(nil, '') }
